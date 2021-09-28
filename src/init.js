@@ -17,8 +17,10 @@ $(document).ready(function() {
      * "this" = the button that was just clicked
      */
 
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-    console.log($(this).data());
+
+    //".data" is an object. Anything with the 'data-' prefix will be stored here as a key/value pair
+
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name'); // example : returns makeBlinkyDancer
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];

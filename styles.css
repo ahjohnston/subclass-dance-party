@@ -23,5 +23,6 @@ body, a:link, a:visited, a:active{
 .dancer{
   border:10px solid red;
   border-radius:10px;
+   /* this makes the dancer a cirlce */
   position:absolute;
 }

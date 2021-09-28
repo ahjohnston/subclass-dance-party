@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "subclass-dance-party",
   "scripts": {
-    "start": "npx live-server"
+    "start": "npx live-server --open=./SpecRunner.html"
   },
   "author": "Hack Reactor <curriculum.team@hackreactor.com>",
   "license": "UNLICENSED"
