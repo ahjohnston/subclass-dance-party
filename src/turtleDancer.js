@@ -11,7 +11,6 @@ MakeTurtleDancer.prototype.oldStep = MakeDancer.prototype.step;
 //add methods
 MakeTurtleDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.removeClass('dancer');
   this.$node.addClass('turtle');
   this.$node.attr('src', './lib/turtle.png');
 };

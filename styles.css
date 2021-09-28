@@ -33,59 +33,90 @@ body, a:link, a:visited, a:active{
 .dancer {
   height: 50px;
   position: absolute;
+  animation-duration        : 2s;
+  animation-fill-mode       : both;
+  animation-iteration-count : infinite;
+  animation-timing-function : linear;
+  transform-origin          : bottom;
 }
 
 /* Dancer Classes */
 
-.starfish {
-  height: 50px;
-  position: absolute;
-  animation-duration        : 0.5s;
-  animation-fill-mode       : both;
-  animation-iteration-count : infinite;
-  animation-name            : starfishMove;
-  animation-timing-function : linear;
-  transform-origin          : bottom;
+.whale {
+  animation-name: whaleMove;
 }
 
 .turtle {
-  height: 50px;
-  position: absolute;
-  animation-duration        : 0.5s;
-  animation-fill-mode       : both;
-  animation-iteration-count : infinite;
-  animation-name            : turtleMove;
-  animation-timing-function : linear;
-  transform-origin          : bottom;
+  animation-name: turtleMove;
 }
 
-.whale {
-  height: 50px;
-  position: absolute;
-  animation-duration        : 2s;
-  animation-fill-mode       : both;
-  animation-iteration-count : infinite;
-  animation-name            : whaleMove;
-  animation-timing-function : linear;
-  transform-origin          : bottom;
-};
+.starfish {
+  animation-name: starfishMove;
+}
 
 /* Dancer Moves */
+/* whale move */
 
+@-webkit-keyframes whaleMove {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@-moz-keyframes whaleMove {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@-o-keyframes whaleMove {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
 @keyframes whaleMove {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 
-@keyframes starfishMove {
+/* starfish move */
+
+@-webkit-keyframes starfishMove {
+  0%   { transform: scale(1, 1) ; }
+  50%  { transform: scale(1.2, 1.2) ; }
+}
+@-moz-keyframes   starfishMove {
+  0%   { transform: scale(1, 1) ; }
+  50%  { transform: scale(1.2, 1.2) ; }
+}
+@-o-keyframes     starfishMove {
+  0%   { transform: scale(1, 1) ; }
+  50%  { transform: scale(1.2, 1.2) ; }
+}
+@keyframes        starfishMove {
   0%   { transform: scale(1, 1) ; }
   50%  { transform: scale(1.2, 1.2) ; }
 }
 
-@keyframes turtleMove {
+/* turtle move */
+
+@-webkit-keyframes turtleMove {
   0%   { transform: translate(0%, 0%) ; }
   20%  { transform: translate(0, 20%) ; }
   50%  { transform: translate(20%, 20%) ; }
   80%  { transform: translate(20%, 0%) ; }
 }
-
+@-moz-keyframes   turtleMove {
+  0%   { transform: translate(0%, 0%) ; }
+  20%  { transform: translate(0, 20%) ; }
+  50%  { transform: translate(20%, 20%) ; }
+  80%  { transform: translate(20%, 0%) ; }
+}
+@-o-keyframes     turtleMove {
+  0%   { transform: translate(0%, 0%) ; }
+  20%  { transform: translate(0, 20%) ; }
+  50%  { transform: translate(20%, 20%) ; }
+  80%  { transform: translate(20%, 0%) ; }
+}
+@keyframes        turtleMove {
+  0%   { transform: translate(0%, 0%) ; }
+  20%  { transform: translate(0, 20%) ; }
+  50%  { transform: translate(20%, 20%) ; }
+  80%  { transform: translate(20%, 0%) ; }
+}

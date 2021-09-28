@@ -14,7 +14,6 @@ MakeWhaleDancer.prototype.oldStep = MakeDancer.prototype.step;
 //add methods
 MakeWhaleDancer.prototype.step = function () {
   this.oldStep();
-  this.$node.removeClass('dancer');
   this.$node.addClass('whale');
   this.$node.attr('src', './lib/whale.png');
 };
