@@ -1,56 +1,45 @@
 body, html{
   height:100%;
 }
+
 body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url('lib/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
+
 .topbar{
   height:32px;
   background-color: #555;
 }
+
 .title{
   background-color: #777;
 }
-.dancer{
-  /* border:10px solid red;
-  border-radius:10px; */
-  /* position:absolute; */
-}
 
-.whaleDancer{
+.dancer {
   height: 50px;
   position: absolute;
-  animation-name: whaleFlip;
-  animation-duration: 1.0s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-
-
-};
-
-.turtle {
-  height: 50px;
-  position:absolute;
-  animation-duration        : 0.5s;
-  animation-fill-mode       : both;
-  animation-iteration-count : infinite;
-  animation-name            : turtleMove;
-  animation-timing-function : linear;
-  transform-origin          : bottom;
 }
+
+/* Dancer Classes */
 
 .starfish {
   height: 50px;
-  position:absolute;
+  position: absolute;
   animation-duration        : 0.5s;
   animation-fill-mode       : both;
   animation-iteration-count : infinite;
@@ -59,25 +48,44 @@ body, a:link, a:visited, a:active{
   transform-origin          : bottom;
 }
 
-@keyframes turtleMove {
-  0%   { transform: translate(0%, 0%) ; }
-  20%  { transform: translate(0, 20%) ; }
-  50%  { transform: translate(20%, 20%) ; }
-  80%  { transform: translate(20%, 0%) ; }
-  100% { transform: translate(0%, 0%); }
+.turtle {
+  height: 50px;
+  position: absolute;
+  animation-duration        : 0.5s;
+  animation-fill-mode       : both;
+  animation-iteration-count : infinite;
+  animation-name            : turtleMove;
+  animation-timing-function : linear;
+  transform-origin          : bottom;
+}
+
+.whale {
+  height: 50px;
+  position: absolute;
+  animation-duration        : 2s;
+  animation-fill-mode       : both;
+  animation-iteration-count : infinite;
+  animation-name            : whaleMove;
+  animation-timing-function : linear;
+  transform-origin          : bottom;
+};
+
+/* Dancer Moves */
+
+@keyframes whaleMove {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 @keyframes starfishMove {
   0%   { transform: scale(1, 1) ; }
   50%  { transform: scale(1.2, 1.2) ; }
-  100% { transform: scale(1, 1) ; }
 }
 
-@keyframes whaleFlip {
-  from {
-    transform: rotate(0deg);
-  } to {
-    transform: rotate(360deg);
-  }
-
+@keyframes turtleMove {
+  0%   { transform: translate(0%, 0%) ; }
+  20%  { transform: translate(0, 20%) ; }
+  50%  { transform: translate(20%, 20%) ; }
+  80%  { transform: translate(20%, 0%) ; }
 }
+
