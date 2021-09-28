@@ -12,28 +12,16 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
+  it('should have a step function that adds starfish as a class', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
     blinkyDancer.step();
-    expect(blinkyDancer.$node.toggle.called).to.be.true;
-    blinkyDancer.$node.toggle.restore();
+    expect(blinkyDancer.$node.attr('class').includes('starfish')).to.be.true;
   });
 
-  describe('dance', function() {
-    it('should call step at least once per second', function() {
-      sinon.spy(blinkyDancer, 'step');
-      expect(blinkyDancer.step.callCount).to.be.equal(0);
-      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-      clock.tick(timeBetweenSteps);
-
-      expect(blinkyDancer.step.callCount).to.be.equal(1);
-
-      clock.tick(timeBetweenSteps);
-      expect(blinkyDancer.step.callCount).to.be.equal(2);
-    });
+  it('should have a step function that adds starfish image as the path', function() {
+    var path = './lib/starfish.png';
+    sinon.spy(blinkyDancer.$node, 'toggle');
+    blinkyDancer.step();
+    expect(blinkyDancer.$node.attr('src')).to.equal(path);
   });
-
-  // afterEach(function () {
-  //   blinkyDancer.step.restore();
-  // });
 });
