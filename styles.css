@@ -26,3 +26,10 @@ body, a:link, a:visited, a:active{
    /* this makes the dancer a cirlce */
   position:absolute;
 }
+
+.whaleDancer{
+  border:100px solid red;
+  border-radius:10px;
+   /* this makes the dancer a cirlce */
+  position:absolute;
+}

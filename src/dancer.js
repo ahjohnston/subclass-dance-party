@@ -3,6 +3,7 @@ var MakeDancer = function (top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
+  console.log('hi', this); //in the spec, this logs correctly (the dancer object), but in dancefloor this logs "window"
   this.step();
   this.setPosition(top, left);
 };

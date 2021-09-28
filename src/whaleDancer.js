@@ -1,6 +1,7 @@
 var MakeWhaleDancer = function (top, left, timeBetweenSteps) {
   //start with the parent class as a base
   MakeDancer.call(this, top, left, timeBetweenSteps);
+  console.log('whales!');
   //each new whaleDancer will be represented by a small image of a whale
 };
 

@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -21,13 +21,12 @@ $(document).ready(function() {
     //".data" is an object. Anything with the 'data-' prefix will be stored here as a key/value pair
 
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name'); // example : returns makeBlinkyDancer
-
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
