@@ -12,14 +12,10 @@ MakeWhaleDancer.prototype = Object.create(MakeDancer.prototype);
 MakeWhaleDancer.prototype.oldStep = MakeDancer.prototype.step;
 
 //add methods
-MakeWhaleDancer.prototype.flip = function() {
+MakeWhaleDancer.prototype.step = function() {
   this.oldStep();
   this.$node.toggle();
   //rotate the whale's image by 90 degrees, four times
-};
-
-MakeWhaleDancer.prototype.slap = function() {
-  //change the image from down --> flat --> up --> flat
 };
 
 //reassign the constructor

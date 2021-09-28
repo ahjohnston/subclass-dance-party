@@ -16,6 +16,7 @@ describe('whaleDancer', function() {
     sinon.spy(whaleDancer.$node, 'toggle');
     whaleDancer.step();
     expect(whaleDancer.$node.toggle.called).to.be.true;
+    whaleDancer.$node.toggle.restore();
   });
 
   describe('dance', function() {

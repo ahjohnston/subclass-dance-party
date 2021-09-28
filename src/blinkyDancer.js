@@ -12,7 +12,9 @@ MakeBlinkyDancer.prototype.oldStep = MakeDancer.prototype.step;
 //add methods
 MakeBlinkyDancer.prototype.step = function() {
   this.oldStep();
-  this.$node.toggle();
+  this.$node.removeClass('dancer');
+  this.$node.addClass('starfish');
+  this.$node.attr('src', './lib/starfish.png');
 };
 
 //reassign the constructor
