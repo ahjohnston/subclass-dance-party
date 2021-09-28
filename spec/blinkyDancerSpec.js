@@ -13,14 +13,14 @@ describe('blinkyDancer', function() {
   });
 
   it('should have a step function that adds starfish as a class', function() {
-    sinon.spy(blinkyDancer.$node, 'toggle');
+    sinon.spy(blinkyDancer.$node);
     blinkyDancer.step();
     expect(blinkyDancer.$node.attr('class').includes('starfish')).to.be.true;
   });
 
   it('should have a step function that adds starfish image as the path', function() {
     var path = './lib/starfish.png';
-    sinon.spy(blinkyDancer.$node, 'toggle');
+    sinon.spy(blinkyDancer.$node);
     blinkyDancer.step();
     expect(blinkyDancer.$node.attr('src')).to.equal(path);
   });

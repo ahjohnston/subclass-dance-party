@@ -13,14 +13,14 @@ describe('turtleDancer', function() {
   });
 
   it('should have a step function that adds turtle as a class', function() {
-    sinon.spy(turtleDancer.$node, 'toggle');
+    sinon.spy(turtleDancer.$node);
     turtleDancer.step();
     expect(turtleDancer.$node.attr('class').includes('turtle')).to.be.true;
   });
 
   it('should have a step function that adds turtle image as the path', function() {
     var path = './lib/turtle.png';
-    sinon.spy(turtleDancer.$node, 'toggle');
+    sinon.spy(turtleDancer.$node);
     turtleDancer.step();
     expect(turtleDancer.$node.attr('src')).to.equal(path);
   });

@@ -12,24 +12,16 @@ describe('whaleDancer', function() {
     expect(whaleDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  xit('should have a step function that makes its node blink', function() {
-    sinon.spy(whaleDancer.$node, 'toggle');
+  it('should have a step function that adds whale as a class', function() {
+    sinon.spy(whaleDancer.$node);
     whaleDancer.step();
-    expect(whaleDancer.$node.toggle.called).to.be.true;
-    whaleDancer.$node.toggle.restore();
+    expect(whaleDancer.$node.attr('class').includes('whale')).to.be.true;
   });
 
-  describe('dance', function() {
-    it('should call step at least once per second', function() {
-      sinon.spy(whaleDancer, 'step');
-      expect(whaleDancer.step.callCount).to.be.equal(0);
-      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-      clock.tick(timeBetweenSteps);
-
-      expect(whaleDancer.step.callCount).to.be.equal(1);
-
-      clock.tick(timeBetweenSteps);
-      expect(whaleDancer.step.callCount).to.be.equal(2);
-    });
+  it('should have a step function that adds whale image as the path', function() {
+    var path = './lib/whale.png';
+    sinon.spy(whaleDancer.$node);
+    whaleDancer.step();
+    expect(whaleDancer.$node.attr('src')).to.equal(path);
   });
 });
