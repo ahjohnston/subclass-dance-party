@@ -21,17 +21,21 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  /* border:10px solid red;
+  border-radius:10px; */
+  /* position:absolute; */
 }
 
 .whaleDancer{
-  border:100px solid red;
-  border-radius:10px;
-   /* this makes the dancer a cirlce */
-  position:absolute;
-}
+  height: 50px;
+  position: absolute;
+  animation-name: whaleFlip;
+  animation-duration: 1.0s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+
+
+};
 
 .turtle {
   height: 50px;
@@ -67,4 +71,13 @@ body, a:link, a:visited, a:active{
   0%   { transform: scale(1, 1) ; }
   50%  { transform: scale(1.2, 1.2) ; }
   100% { transform: scale(1, 1) ; }
+}
+
+@keyframes whaleFlip {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+
 }
