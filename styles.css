@@ -23,6 +23,31 @@ body, a:link, a:visited, a:active{
 .dancer{
   border:10px solid red;
   border-radius:10px;
-   /* this makes the dancer a cirlce */
   position:absolute;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+.turtle {
+  height: 50px;
+  position:absolute;
+  animation-duration        : 0.5s;
+  animation-fill-mode       : both;
+  animation-iteration-count : infinite;
+  animation-name            : turtleMove;
+  animation-timing-function : linear;
+  transform-origin          : bottom;
+}
+
+@keyframes turtleMove {
+  0%   { transform: translate(0%, 0%) ; }
+  10%   { transform: translate(0%, 10%) ; }
+  20%  { transform: translate(10%, 20%) ; }
+  40%  { transform: translate(20%, 20%) ; }
+  60%  { transform: translate(20%, 10%) ; }
+  80%  { transform: translate(20%, 0%) ; }
+  90%  { transform: translate(10%, 0%) ; }
+  100% { transform: translate(0%, 0%); }
 }
