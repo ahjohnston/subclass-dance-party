@@ -18,6 +18,10 @@ MakeWhaleDancer.prototype.step = function () {
   this.$node.attr('src', './lib/whale.png');
 };
 
+MakeWhaleDancer.prototype.lineUp = function() {
+  this.$node.addClass('lineUpWhale');
+};
+
 //rotate the whale's image by 90 degrees, four times
 
 // MakeWhaleDancer.prototype.flip = function () {

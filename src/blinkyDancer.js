@@ -16,5 +16,9 @@ MakeBlinkyDancer.prototype.step = function() {
   this.$node.attr('src', './lib/starfish.png');
 };
 
+MakeBlinkyDancer.prototype.lineUp = function() {
+  this.$node.addClass('lineUpStarfish');
+};
+
 //reassign the constructor
 MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;

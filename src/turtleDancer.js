@@ -15,5 +15,9 @@ MakeTurtleDancer.prototype.step = function() {
   this.$node.attr('src', './lib/turtle.png');
 };
 
+MakeTurtleDancer.prototype.lineUp = function() {
+  this.$node.addClass('lineUpTurtle');
+};
+
 //reassign the constructor
 MakeTurtleDancer.prototype.constructor = MakeTurtleDancer;
