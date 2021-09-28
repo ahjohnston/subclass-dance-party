@@ -17,22 +17,20 @@ $(document).ready(function() {
      * "this" = the button that was just clicked
      */
 
-
     //".data" is an object. Anything with the 'data-' prefix will be stored here as a key/value pair
-
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name'); // example : returns makeBlinkyDancer
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 });
-

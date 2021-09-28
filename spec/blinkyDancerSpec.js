@@ -16,6 +16,7 @@ describe('blinkyDancer', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle.called).to.be.true;
+    blinkyDancer.$node.toggle.restore();
   });
 
   describe('dance', function() {
@@ -31,4 +32,8 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
+
+  // afterEach(function () {
+  //   blinkyDancer.step.restore();
+  // });
 });
