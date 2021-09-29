@@ -35,12 +35,13 @@ $(document).ready(function () {
   });
 
   $('.lineUp').on('click', function (event) {
-    for (var i = 0; i < window.dancers.length; i ++) {
+    for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
     }
   });
 
-  // $(//document//).on.('mouseover','dancer',(function() {
-  //   alert("I'm a dancer!")
-  // });
+  $('body').on('mouseover', '.dancer', (function () {
+    console.log(this.classList);
+    alert('I\'m a beautiful ' + this.classList[1] + '!');
+  }));
 });
