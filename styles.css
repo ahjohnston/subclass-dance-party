@@ -54,8 +54,37 @@ body, a:link, a:visited, a:active{
   animation-name: starfishMove;
 }
 
+.lineUpWhale {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+.lineUpStarfish {
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+
+}
+
+.lineUpTurtle {
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+
+}
+
 /* Dancer Moves */
 /* whale move */
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    left: 0;
+  }
+}
 
 @-webkit-keyframes whaleMove {
   from { transform: rotate(0deg); }
