@@ -39,4 +39,8 @@ $(document).ready(function () {
       window.dancers[i].lineUp();
     }
   });
+
+  // $(//document//).on.('mouseover','dancer',(function() {
+  //   alert("I'm a dancer!")
+  // });
 });
